@@ -42,14 +42,10 @@ alias wget='wget --no-check-certificate'
 export EDITOR='vim'
 
 # RVM
-# if [ -s $HOME/.rvm/scripts/rvm ]; then
-#     . $HOME/.rvm/scripts/rvm
-#     rvm rvmrc load
-# fi
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
+if [ -s $HOME/.rvm/scripts/rvm ]; then
+   . $HOME/.rvm/scripts/rvm
+   rvm rvmrc load
+fi
 
 # rails command
 _script_rails() {
